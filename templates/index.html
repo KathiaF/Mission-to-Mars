@@ -9,6 +9,45 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    <style>
+      .jumbotron { 
+        color: #f08582;
+        background-color: #fae4c9;
+        font-family: "Courier New", monospace;
+        font-style: oblique;
+        font-variant: small-caps;
+      }
+      .btn-primary{ 
+        background-color: MediumSeaGreen; /* Green */
+        border: 2px solid #4CAF50; /* Green */
+      }
+
+      #mars-hemispheres{
+        background-color: #fae4c9;
+        border-radius: 10px;
+        font-family: "Courier New", monospace;
+      }
+      .thumbnail{
+        font-size: 5em;
+        border: 1px solid #f08582;
+        background-color: Lavender;
+        
+      }
+
+      #mars-facts table{
+        font-family: "Courier New", monospace;
+      }
+
+      #mars-facts th{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+      }
+
+    </style>
+
   </head>
   <body>
     <div class="container">
@@ -61,7 +100,7 @@
         </div>
 
         {% for hemisphere in mars.hemispheres %}
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="thumbnail">
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="..." >
             <div class="caption">
